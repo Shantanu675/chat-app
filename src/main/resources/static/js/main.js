@@ -27,7 +27,7 @@ function connect(event) {
             window.location.protocol + '//' + window.location.host + '/ws'
         );
         stompClient = Stomp.over(socket);
-
+        stompClient.debug = null;
         stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
